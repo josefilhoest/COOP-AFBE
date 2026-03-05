@@ -3,33 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Faz o corpo ocupar a altura toda da tela */
-    background-color: #22581470; /* Um cinza bem clarinho para o fundo geral */
+    min-height: 100vh;
+    /* Faz o corpo ocupar a altura toda da tela */
+    background-color: #22581470;
+    /* Um cinza bem clarinho para o fundo geral */
 }
 
 main {
-    flex: 1; /* Empurra o footer para o final da página automaticamente */
-    padding: 40px 5%; /* Dá um respiro lateral e vertical para o conteúdo */
-     
+    flex: 1;
+    /* Empurra o footer para o final da página automaticamente */
+    padding: 40px 5%;
+    /* Dá um respiro lateral e vertical para o conteúdo */
 
-   
+
+
 }
+
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #1b5e20; /* Verde escuro para os títulos */
+    color: #1b5e20;
+    /* Verde escuro para os títulos */
     margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     font-size: 1.8rem;
 }
+
 p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #3d3d3d; /* Cinza escuro para o texto */
+    color: #3d3d3d;
+    /* Cinza escuro para o texto */
     margin-bottom: 20px;
 }
 
@@ -39,26 +48,33 @@ p {
 .main-header {
     background: linear-gradient(120deg, #2e7d32 0%, #e6fb2d 100%);
     color: #faf8f8;
-    padding: 30px 0; /* Padding vertical */
+    padding: 30px 0;
+    /* Padding vertical */
     border-bottom: 3px solid #1b5e20;
 
 }
+
 .main-header {
-    position: relative; /* Necessário para posicionar a imagem de fundo */
+    position: relative;
+    /* Necessário para posicionar a imagem de fundo */
     background: linear-gradient(120deg, #2e7d32 0%, #e6fb2d 100%);
     color: #faf8f8;
     padding: 30px 0;
     border-bottom: 3px solid #1b5e20;
 }
+
 .header-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
-    opacity: 0.3; /* Deixa a imagem mais transparente para destacar o texto */
-    z-index: 0; /* Coloca a imagem atrás do conteúdo do cabeçalho */
+    object-fit: cover;
+    /* Garante que a imagem cubra todo o espaço sem distorcer */
+    opacity: 0.3;
+    /* Deixa a imagem mais transparente para destacar o texto */
+    z-index: 0;
+    /* Coloca a imagem atrás do conteúdo do cabeçalho */
 }
 
 
@@ -68,9 +84,10 @@ p {
     font-weight: 700;
     font-size: 1.7rem;
     letter-spacing: -0.5px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     margin: 0;
-    flex: 1; /* Faz o título ocupar o espaço restante ao lado da logo */
+    flex: 1;
+    /* Faz o título ocupar o espaço restante ao lado da logo */
 }
 
 /* Ajuste das informações de contato para ficarem legíveis no degrade */
@@ -83,10 +100,10 @@ p {
 
 .contact-info p {
     margin: 5px 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #272727;
     font-weight: 600;
-     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -94,80 +111,102 @@ p {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    flex-wrap: wrap;
+    /* Permite quebrar linha em telas pequenas */
     gap: 25px;
     padding: 0 5%;
     margin-bottom: 20px;
 }
 
 .logo {
-    width: 170px; /* 180px pode ser muito grande para alguns navegadores, 150px é o ideal */
+    width: 170px;
+    /* 180px pode ser muito grande para alguns navegadores, 150px é o ideal */
     height: auto;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     transition: all 0.3s ease;
 }
+
 .logo:hover {
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5)); /* Aumenta a sombra ao passar o mouse */
-    transform: scale(1.1); /* Aumenta o tamanho da logo ao passar o mouse */
-   
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    /* Aumenta a sombra ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta o tamanho da logo ao passar o mouse */
+
 }
+
 .product-list {
     list-style: none;
     padding-left: 0;
 }
+
 .product-image {
     width: 100%;
     max-width: 300px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Alinha lado a lado */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Alinha lado a lado */
     gap: 20px;
     padding: 20px;
 }
 
 .product-image-wrapper {
     width: 100%;
-    height: 200px; /* Altura fixa para todas as fotos */
+    height: 200px;
+    /* Altura fixa para todas as fotos */
     overflow: hidden;
 }
 
 .product-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem preencher o espaço sem esticar */
+    object-fit: cover;
+    /* Faz a imagem preencher o espaço sem esticar */
     transition: transform 0.3s ease;
 }
 
 .product-card:hover img {
-    transform: scale(1.1); /* Efeito de zoom na foto ao passar o mouse */
+    transform: scale(1.1);
+    /* Efeito de zoom na foto ao passar o mouse */
 }
-    
+
 .main-header h1 {
-    font-size: 1.6rem;      /* Ajuste para que o texto não fique grande demais ao lado da logo */
-    max-width: 600px;       /* Limita a largura para o texto quebrar em duas linhas se necessário */
-    text-align: left;       /* Alinha o texto à esquerda em relação à logo */
+    font-size: 1.6rem;
+    /* Ajuste para que o texto não fique grande demais ao lado da logo */
+    max-width: 600px;
+    /* Limita a largura para o texto quebrar em duas linhas se necessário */
+    text-align: left;
+    /* Alinha o texto à esquerda em relação à logo */
     margin: 0;
 }
+
 /* Container do Menu */
 .main-nav {
-    background-color: #1b5e20; /* Um verde mais escuro para contrastar com o header */
+    background-color: #1b5e20;
+    /* Um verde mais escuro para contrastar com o header */
     padding: 10px 0;
     border-bottom: 3px solid #b1ee24;
-    position: sticky; /* Deixa o menu fixo no topo ao rolar a página */
+    position: sticky;
+    /* Deixa o menu fixo no topo ao rolar a página */
     top: 0;
 }
 
 /* Estilização da Lista (ul) */
 .main-nav ul {
-    list-style: none;          /* Remove as bolinhas da lista */
-    display: flex;             /* Alinha os itens lado a lado */
-    justify-content: center;   /* Centraliza o menu na largura da página */
-    gap: 30px;                /* Espaçamento entre os links */
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    display: flex;
+    /* Alinha os itens lado a lado */
+    justify-content: center;
+    /* Centraliza o menu na largura da página */
+    gap: 30px;
+    /* Espaçamento entre os links */
     margin: 0;
     padding: 0;
 }
@@ -181,8 +220,10 @@ p {
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
-    position: relative; /* Necessário para posicionar a barra */
-    padding-bottom: 5px; /* Espaço para a barra não colar na letra */
+    position: relative;
+    /* Necessário para posicionar a barra */
+    padding-bottom: 5px;
+    /* Espaço para a barra não colar na letra */
 }
 
 /* Criando a barra invisível (estado inicial) */
@@ -191,15 +232,20 @@ p {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0;           /* Começa com largura zero */
-    height: 3px;        /* Espessura da barra */
-    background-color: #fbc02d; /* Amarelo da cooperativa */
-    transition: width 0.3s ease-in-out; /* Animação de crescimento */
+    width: 0;
+    /* Começa com largura zero */
+    height: 3px;
+    /* Espessura da barra */
+    background-color: #fbc02d;
+    /* Amarelo da cooperativa */
+    transition: width 0.3s ease-in-out;
+    /* Animação de crescimento */
 }
 
 /* Efeito ao passar o mouse (a barra cresce) */
 .main-nav a:hover::after {
-    width: 100%;        /* A barra ocupa toda a largura do link */
+    width: 100%;
+    /* A barra ocupa toda a largura do link */
 }
 
 /* Opcional: Mudar a cor do texto junto com a barra */
@@ -215,7 +261,8 @@ p {
 
 /* Estilo do ícone com degradê real */
 .social-link i.fa-instagram {
-    font-size: 2.5rem; /* Tamanho maior para o ícone brilhar sozinho */
+    font-size: 2.5rem;
+    /* Tamanho maior para o ícone brilhar sozinho */
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -226,28 +273,36 @@ p {
 
 /* Efeito ao passar o mouse */
 .social-link a:hover i.fa-instagram {
-    transform: scale(1.2) rotate(8deg); /* Aumento e um leve giro para a direita */
-    filter: drop-shadow(0 5px 15px rgba(214, 36, 159, 0.4)); /* Sombra rosa suave */
+    transform: scale(1.2) rotate(8deg);
+    /* Aumento e um leve giro para a direita */
+    filter: drop-shadow(0 5px 15px rgba(214, 36, 159, 0.4));
+    /* Sombra rosa suave */
 }
+
 .social-link {
     position: static;
     bottom: 20px;
-    right: 20px; /* Ou left: 20px se preferir no outro canto */
+    right: 20px;
+    /* Ou left: 20px se preferir no outro canto */
     z-index: 1000;
 }
+
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 20px; /* Distância do fundo */
-    right: 20px;  /* Distância da direita */
+    bottom: 20px;
+    /* Distância do fundo */
+    right: 20px;
+    /* Distância da direita */
     background-color: #25d366;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000; /* Garante que fique acima de tudo */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* Garante que fique acima de tudo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,14 +319,17 @@ p {
     transform: scale(1.1);
     background-color: #128c7e;
 }
+
 /* 1. Criando a animação de pulsação */
 @keyframes pulse-whatsapp {
     0% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
     }
+
     70% {
         box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
@@ -280,13 +338,15 @@ p {
 /* 2. Aplicando a animação ao botão */
 .whatsapp-float {
     /* ... (mantenha as propriedades anteriores) ... */
-    animation: pulse-whatsapp 2s infinite; /* Isso faz o pulso durar 2s e repetir para sempre */
+    animation: pulse-whatsapp 2s infinite;
+    /* Isso faz o pulso durar 2s e repetir para sempre */
 }
 
 
 
 .main-footer {
-    background-color: #2c3e50; /* Um tom escuro passa seriedade */
+    background-color: #2c3e50;
+    /* Um tom escuro passa seriedade */
     color: white;
     padding: 40px 20px 20px;
     font-family: sans-serif;
@@ -306,13 +366,16 @@ p {
     min-width: 250px;
 }
 
-.footer-column p, .footer-bottom p  {
+.footer-column p,
+.footer-bottom p {
     margin-bottom: 15px;
     color: #FFF;
 }
 
-.footer-column h3, .footer-column h4 {
-    color: #27ae60; /* Verde da agricultura */
+.footer-column h3,
+.footer-column h4 {
+    color: #27ae60;
+    /* Verde da agricultura */
     margin-bottom: 15px;
 }
 
@@ -333,13 +396,40 @@ p {
     padding-top: 20px;
     border-top: 1px solid #34495e;
     font-size: 0.9em;
-    
+
 }
 
 .footer-bottom a {
     color: #27ae60;
     text-decoration: none;
 }
+
+.social-links {
+    margin-top: 15px;
+}
+
+social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #34495e; /* Fundo discreto */
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Cor oficial do Instagram no Hover */
+.social-icon.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    transform: translateY(-5px);
+}
+
+
 
 /* Botão Hamburguer */
 .menu-toggle {
@@ -383,63 +473,73 @@ p {
     .contact-info {
         text-align: center;
         padding-left: 0;
-        
+
     }
+
     .contact-info p {
         font-size: 1.2rem;
     }
+
     .footer-text {
-    color: #f7f4f4;
-    font-size: 1.1rem;
-    
-}
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px; /* Distância do fundo */
-    right: 20px;  /* Distância da direita */
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000; /* Garante que fique acima de tudo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-}
+        color: #f7f4f4;
+        font-size: 1.1rem;
 
-.whatsapp-float img {
-    width: 35px;
-    height: 35px;
-}
+    }
 
-/* Efeito de aumentar ao passar o mouse */
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128c7e;
-}
-/* 1. Criando a animação de pulsação */
-@keyframes pulse-whatsapp {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        /* Distância do fundo */
+        right: 20px;
+        /* Distância da direita */
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        /* Garante que fique acima de tudo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
     }
-    70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
 
-/* 2. Aplicando a animação ao botão */
-.whatsapp-float {
-    /* ... (mantenha as propriedades anteriores) ... */
-    animation: pulse-whatsapp 2s infinite; /* Isso faz o pulso durar 2s e repetir para sempre */
-}
+    .whatsapp-float img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Efeito de aumentar ao passar o mouse */
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #128c7e;
+    }
+
+    /* 1. Criando a animação de pulsação */
+    @keyframes pulse-whatsapp {
+        0% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+
+        70% {
+            box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+    }
+
+    /* 2. Aplicando a animação ao botão */
+    .whatsapp-float {
+        /* ... (mantenha as propriedades anteriores) ... */
+        animation: pulse-whatsapp 2s infinite;
+        /* Isso faz o pulso durar 2s e repetir para sempre */
+    }
 
 
 
