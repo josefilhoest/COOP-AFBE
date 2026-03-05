@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/josefilhoest/COOP-AFBE?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/josefilhoest/COOP-AFBE?style=for-the-badge)
 
-Este é um site institucional desenvolvido para a **COOP-AFBE**, com o objetivo de dar visibilidade aos pequenos produtores rurais de Bebebribe, facilitando o contato com consumidores e promovendo a agricultura sustentável.
+Este é um site institucional desenvolvido para a **COOP-AFBE**, com o objetivo de dar visibilidade aos pequenos produtores rurais de Beberibe, facilitando o contato com consumidores e promovendo a agricultura sustentável.
 
 ## 🔗 Demonstração
 Você pode visualizar o projeto online aqui:  
