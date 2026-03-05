@@ -10,12 +10,33 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <meta name="description"
+        content="COOP-AFBE - Cooperativa dos Produtores e Agricultores Familiares de Beberibe. Produtos frescos, orgânicos e sustentáveis direto do produtor para sua mesa.">
+    <meta name="keywords"
+        content="agricultura familiar, Beberibe, cooperativa agrícola, produtos orgânicos, hortifruti, COOP-AFBE">
+    <meta name="author" content="José Filho">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://josefilhoest.github.io/COOP-AFBE/">
+    <meta property="og:title" content="COOP-AFBE | Agricultura Familiar de Beberibe">
+    <meta property="og:description"
+        content="Conheça nossos produtos e apoie a agricultura familiar. Qualidade e sustentabilidade direto do campo.">
+    <meta property="og:image" content="https://josefilhoest.github.io/COOP-AFBE/img/logo-social.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://josefilhoest.github.io/COOP-AFBE/">
+    <meta property="twitter:title" content="COOP-AFBE | cooperativa agrícola de Beberibe">
+    <meta property="twitter:description" content="Produtos frescos e sustentáveis da nossa cooperativa.">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png">
+
+    <link rel="apple-touch-icon" href="./img/favicon-32x32.png">
+
 
 </head>
 
 <body>
     <header class="main-header">
-        <div> 
+        <div>
             <img class="header-background" src="./img/fundo agricola por.jpg" alt="Imagem de fundo do campo agrícola">
         </div>
 
@@ -36,22 +57,22 @@
 
     </header>
     <nav class="main-nav">
-    
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
 
-    </div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
 
-    <ul id="menu">
-        <li><a href="#">Início</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-    </ul>
+        </div>
 
-</nav>
+        <ul id="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
 
-    
+    </nav>
+
+
 
     <main class="section">
         <section id="sobre" class="about-section">
@@ -163,27 +184,47 @@
 
 
 
-    <footer>
-        <div class="social-link">
-            <a href="https://www.instagram.com/coopafbeoficial/ target=" _blank" aria-label="Siga-nos no Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>COOP-AFBE</h3>
+            <p>COOPERATIVA DOS PRODUTORES E AGRICULTORES FAMILIARES DE BEBERIBE LTDA .Cultivando sustentabilidade e qualidade direto do campo.</p>
         </div>
-        <p class="footer-text">&copy; 2026 COOPERATIVA DOS PRODUTORES E AGRICULTORES FAMILIARES DE BEBERIBE LTDA. Todos
-            os direitos
-            reservados.</p>
-    </footer>
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
 
-    toggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-    });
-</script>
-<a href="https://wa.me/558596657751" class="whatsapp-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
+        <div class="footer-column">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contato</h4>
+            <p>📍  R. Manoel Francisco das Chagas, 554 -Sucatinga, Beberibe - CE</p>
+            <p>📧 contato@coopafbe.com.br</p>
+            <p>📞 (85) 96657-751</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 COOP-AFBE. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://github.com/josefilhoest" target="_blank"><strong>José Filho</strong></a></p>
+    </div>
+</footer>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+    <a href="https://wa.me/558596657751" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 </body>
 
 </html>
