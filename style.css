@@ -1,324 +1,1180 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* Faz o corpo ocupar a altura toda da tela */
-    background-color: #22581470;
-    /* Um cinza bem clarinho para o fundo geral */
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #22581470;
 }
 
 main {
-    flex: 1;
-    /* Empurra o footer para o final da página automaticamente */
-    padding: 40px 5%;
-    /* Dá um respiro lateral e vertical para o conteúdo */
+  flex: 1;
+  padding: 40px 5%;
+}
 
+.about-section {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  border-left: 5px solid #27ae60;
+  box-shadow: 0 4px 15px rgba(27, 94, 32, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
 
-
+.about-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #1b5e20;
-    /* Verde escuro para os títulos */
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #1b5e20;
+  /* Verde escuro para os títulos */
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+  animation: slideInDown 0.8s ease-out;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1b5e20, #27ae60);
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out 0.3s forwards;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #3d3d3d;
-    /* Cinza escuro para o texto */
-    margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3d3d3d;
+  /* Cinza escuro para o texto */
+  margin-bottom: 20px;
 }
 
 span {
-    color: #0e853f;
-    /* Verde vibrante para destacar palavras-chave */
-    font-weight: 700;
-    font-size: 1.7rem;
+  color: #0e853f;
+  /* Verde vibrante para destacar palavras-chave */
+  font-weight: 700;
+  font-size: 1.7rem;
 }
 
-
-
-
-.main-header {
-    background: linear-gradient(120deg, #2e7d32 0%, #e6fb2d 100%);
-    color: #faf8f8;
-    padding: 30px 0;
-    /* Padding vertical */
-    border-bottom: 3px solid #1b5e20;
-
-}
+/*.main-header {
+  background: linear-gradient(120deg, #2e7d32 0%, #e6fb2d 100%);
+  color: #faf8f8;
+  padding: 30px 0;
+  /* Padding vertical 
+  border-bottom: 10px solid #1b5e20;
+}*/
 
 .main-header {
-    position: relative;
-    /* Necessário para posicionar a imagem de fundo */
-    background: linear-gradient(120deg, #2e7d32 0%, #e6fb2d 100%);
-    color: #faf8f8;
-    padding: 30px 0;
-    border-bottom: 3px solid #1b5e20;
+  position: relative;
+  /* Necessário para posicionar a imagem de fundo */
+  background: linear-gradient(120deg, #2e7d32 0%, #e6fb2d 100%);
+  color: #faf8f8;
+  padding: 30px 0;
+  border-bottom: 3px solid #1b5e20;
 }
 
 .header-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Garante que a imagem cubra todo o espaço sem distorcer */
-    opacity: 0.3;
-    /* Deixa a imagem mais transparente para destacar o texto */
-    z-index: 0;
-    /* Coloca a imagem atrás do conteúdo do cabeçalho */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Garante que a imagem cubra todo o espaço sem distorcer */
+  opacity: 0.2;
+  /* Deixa a imagem mais transparente para destacar o texto */
+  z-index: 0;
+  /* Coloca a imagem atrás do conteúdo do cabeçalho */
 }
 
-
-
 .main-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.7rem;
-    letter-spacing: -0.5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    margin: 0;
-    flex: 1;
-    /* Faz o título ocupar o espaço restante ao lado da logo */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  flex: 1;
+  /* Faz o título ocupar o espaço restante ao lado da logo */
+  animation: slideInDown 0.8s ease-out;
 }
 
 /* Ajuste das informações de contato para ficarem legíveis no degrade */
 .slogam-info {
-    padding-left: 5%;
-    text-align: left;
-    background-color: rgba(255, 255, 255, 0.5);
+  padding-left: 5%;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
-
-
 .slogam-info p {
-    margin: 5px 0;
-    font-size: 1.5rem;
-    color: #272727;
-    font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  font-size: 1.5rem;
+  color: #272727;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: glow 2s ease-in-out infinite;
 }
 
 .info-aside {
-    display: flex;
-    flex-direction: wrap;
-    justify-content: left;
-    gap: 30px;
-    margin-bottom: -25px;
-    margin-top: 20px;
-
-
-
+  display: flex;
+  flex-direction: wrap;
+  justify-content: left;
+  gap: 30px;
+  margin-bottom: -25px;
+  margin-top: 20px;
 }
 
 .info-aside p {
-    font-size: 1.7rem;
-    color: #eef0ee;
-    font-weight: 800;
-    margin-left: 25px;
-    text-shadow: 1px 1px 2px rgba(243, 239, 239, 0.1);
-    background-color: rgba(7, 65, 20, 0.829);
-    padding: 10px 15px;
+  font-size: 1.7rem;
+  color: #eef0ee;
+  font-weight: 800;
+  margin-left: 25px;
+  text-shadow: 1px 1px 2px rgba(243, 239, 239, 0.1);
+  background-color: rgba(7, 65, 20, 0.829);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out;
+}
 
+.info-aside p:nth-child(1) {
+  animation-delay: 0.3s;
+}
 
+.info-aside p:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.info-aside p:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.info-aside p:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.info-aside p:hover {
+  transform: translateY(-4px) scale(1.05);
+  background-color: rgba(27, 94, 32, 1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .brand-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    /* Permite quebrar linha em telas pequenas */
-    gap: 25px;
-    padding: 0 5%;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* Permite quebrar linha em telas pequenas */
+  gap: 25px;
+  padding: 0 5%;
+  margin-bottom: 20px;
 }
 
 .logo {
-    width: 180px;
-    /* 180px pode ser muito grande para alguns navegadores, 150px é o ideal */
-    height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    transition: all 0.3s ease;
+  width: 180px;
+  /* 180px pode ser muito grande para alguns navegadores, 150px é o ideal */
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
 }
 
 .logo:hover {
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
-    /* Aumenta a sombra ao passar o mouse */
-    transform: scale(1.1);
-    /* Aumenta o tamanho da logo ao passar o mouse */
-
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+  /* Aumenta a sombra ao passar o mouse */
+  transform: scale(1.1);
+  /* Aumenta o tamanho da logo ao passar o mouse */
 }
 
 .product-list {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.product-list li {
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(27, 94, 32, 0.05) 0%,
+    rgba(39, 174, 96, 0.05) 100%
+  );
+  border-left: 4px solid #27ae60;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.product-list li:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(27, 94, 32, 0.1) 0%,
+    rgba(39, 174, 96, 0.1) 100%
+  );
+  padding-left: 20px;
+  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.15);
 }
 
 .product-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /* Alinha lado a lado */
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Aumentado o minmax para melhor layout */
+  gap: 28px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .product-image-wrapper {
-    width: 100%;
-    height: 200px;
-    /* Altura fixa para todas as fotos */
-    overflow: hidden;
+  width: 100%;
+  height: 200px;
+  /* Altura fixa para todas as fotos */
+  overflow: hidden;
 }
 
 .product-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Faz a imagem preencher o espaço sem esticar */
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Faz a imagem preencher o espaço sem esticar */
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
-.product-card:hover img {
-    transform: scale(1.1);
-    /* Efeito de zoom na foto ao passar o mouse */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(27, 94, 32, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: scaleUpIn 0.6s ease-out;
+  position: relative;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.product-card:hover::before {
+  left: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(27, 94, 32, 0.25);
+}
+
+.product-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.product-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.product-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.product-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.product-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.product-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.product-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 94, 32, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.product-card:hover .product-image-wrapper img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+#produtos {
+  background: linear-gradient(
+    135deg,
+    rgba(232, 245, 233, 0.5) 0%,
+    rgba(200, 230, 201, 0.3) 100%
+  );
+  padding: 50px 30px;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+  box-shadow: 0 4px 15px rgba(27, 94, 32, 0.1);
+}
+
+#produtos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1b5e20 0%, #27ae60 50%, #1b5e20 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+#produtos h2 {
+  padding-top: 10px;
+}
+
+.category-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #1b5e20 0%, #27ae60 100%);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.3);
+  transition: all 0.3s ease;
+  animation: slideInDown 0.6s ease-out;
+}
+
+.product-card:hover .category-badge {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.5);
+}
+
+.product-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .product-title {
+  color: #27ae60;
+  transform: translateX(5px);
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+.product-card:hover .product-description {
+  color: #333;
+}
+
+.product-footer {
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-header h1 {
-    font-size: 1.6rem;
-    /* Ajuste para que o texto não fique grande demais ao lado da logo */
-    max-width: 600px;
-    /* Limita a largura para o texto quebrar em duas linhas se necessário */
-    text-align: left;
-    /* Alinha o texto à esquerda em relação à logo */
-    margin: 0;
+  font-size: 1.6rem;
+  /* Ajuste para que o texto não fique grande demais ao lado da logo */
+  max-width: 600px;
+  /* Limita a largura para o texto quebrar em duas linhas se necessário */
+  text-align: left;
+  /* Alinha o texto à esquerda em relação à logo */
+  margin: 0;
 }
 
 /* Container do Menu */
 .main-nav {
-    background-color: #1b5e20;
-    /* Um verde mais escuro para contrastar com o header */
-    padding: 10px 0;
-    border-bottom: 3px solid #b1ee24;
-    position: sticky;
-    /* Deixa o menu fixo no topo ao rolar a página */
-    top: 0;
+  background-color: #1b5e20;
+  /* Um verde mais escuro para contrastar com o header */
+  padding: 10px 0;
+  border-bottom: 3px solid #b1ee24;
+  position: sticky;
+  /* Deixa o menu fixo no topo ao rolar a página */
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  animation: slideInDown 0.6s ease-out;
 }
 
 /* Estilização da Lista (ul) */
 .main-nav ul {
-    list-style: none;
-    /* Remove as bolinhas da lista */
-    display: flex;
-    /* Alinha os itens lado a lado */
-    justify-content: center;
-    /* Centraliza o menu na largura da página */
-    gap: 30px;
-    /* Espaçamento entre os links */
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  /* Remove as bolinhas da lista */
+  display: flex;
+  /* Alinha os itens lado a lado */
+  justify-content: center;
+  /* Centraliza o menu na largura da página */
+  gap: 30px;
+  /* Espaçamento entre os links */
+  margin: 0;
+  padding: 0;
 }
 
 /* Estilização dos Links (a) */
 /* Ajuste no link original para preparar a animação */
 .main-nav a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-    position: relative;
-    /* Necessário para posicionar a barra */
-    padding-bottom: 5px;
-    /* Espaço para a barra não colar na letra */
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  /* Necessário para posicionar a barra */
+  padding-bottom: 5px;
+  /* Espaço para a barra não colar na letra */
+  transition: all 0.3s ease;
 }
 
 /* Criando a barra invisível (estado inicial) */
 .main-nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    /* Começa com largura zero */
-    height: 3px;
-    /* Espessura da barra */
-    background-color: #fbc02d;
-    /* Amarelo da cooperativa */
-    transition: width 0.3s ease-in-out;
-    /* Animação de crescimento */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  /* Começa com largura zero */
+  height: 3px;
+  /* Espessura da barra */
+  background: linear-gradient(90deg, #fbc02d, #ffeb3b);
+  /* Amarelo da cooperativa com gradiente */
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Animação de crescimento */
+  border-radius: 2px;
 }
 
 /* Efeito ao passar o mouse (a barra cresce) */
 .main-nav a:hover::after {
-    width: 100%;
-    /* A barra ocupa toda a largura do link */
+  width: 100%;
+  /* A barra ocupa toda a largura do link */
+  box-shadow: 0 3px 8px rgba(251, 192, 45, 0.4);
 }
 
 /* Opcional: Mudar a cor do texto junto com a barra */
 .main-nav a:hover {
-    color: #fbc02d;
+  color: #fbc02d;
+  text-shadow: 0 0 8px rgba(251, 192, 45, 0.3);
 }
 
 /* Container do link social */
 .social-link {
-    display: inline-block;
-    padding: 10px;
+  display: inline-block;
+  padding: 10px;
 }
 
 /* Estilo do ícone com degradê real */
 .social-link i.fa-instagram {
-    font-size: 2.5rem;
-    /* Tamanho maior para o ícone brilhar sozinho */
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s;
-    cursor: pointer;
+  font-size: 2.5rem;
+  /* Tamanho maior para o ícone brilhar sozinho */
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    filter 0.3s;
+  cursor: pointer;
 }
 
 /* Efeito ao passar o mouse */
 .social-link a:hover i.fa-instagram {
-    transform: scale(1.2) rotate(8deg);
-    /* Aumento e um leve giro para a direita */
-    filter: drop-shadow(0 5px 15px rgba(214, 36, 159, 0.4));
-    /* Sombra rosa suave */
+  transform: scale(1.2) rotate(8deg);
+  /* Aumento e um leve giro para a direita */
+  filter: drop-shadow(0 5px 15px rgba(214, 36, 159, 0.4));
+  /* Sombra rosa suave */
 }
 
 .social-link {
-    position: static;
-    bottom: 20px;
-    right: 20px;
-    /* Ou left: 20px se preferir no outro canto */
-    z-index: 1000;
+  position: static;
+  bottom: 20px;
+  right: 20px;
+  /* Ou left: 20px se preferir no outro canto */
+  z-index: 1000;
 }
 
 .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  /* Distância do fundo */
+  right: 20px;
+  /* Distância da direita */
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* Garante que fique acima de tudo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Efeito de aumentar ao passar o mouse */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+/* 1. Criando a animação de pulsação */
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* 2. Aplicando a animação ao botão */
+.whatsapp-float {
+  /* ... (mantenha as propriedades anteriores) ... */
+  animation: pulse-whatsapp 2s infinite;
+  /* Isso faz o pulso durar 2s e repetir para sempre */
+}
+
+/* ANIMAÇÕES PRINCIPAIS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUpIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(27, 94, 32, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(27, 94, 32, 0.8);
+  }
+}
+
+/* ESTILOS DAS SEÇÕES ESPECIAIS */
+#sobre {
+  animation-delay: 0.2s;
+}
+
+#Informaçoes {
+  animation-delay: 0.4s;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 245, 233, 0.3) 0%,
+    rgba(200, 230, 201, 0.2) 100%
+  );
+  padding: 40px;
+  border-radius: 12px;
+  border-left: 5px solid #27ae60;
+  margin-bottom: 50px;
+}
+
+#contato {
+  animation-delay: 0.6s;
+  background: linear-gradient(
+    135deg,
+    rgba(200, 230, 201, 0.3) 0%,
+    rgba(232, 245, 233, 0.3) 100%
+  );
+  padding: 40px;
+  border-radius: 12px;
+  border-left: 5px solid #27ae60;
+  margin-bottom: 50px;
+}
+
+#contato ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#contato li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#contato li:hover {
+  background-color: rgba(27, 94, 32, 0.1);
+  padding-left: 15px;
+  color: #1b5e20;
+}
+
+#contato a {
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+#contato a:hover {
+  color: #1b5e20;
+  border-bottom-color: #27ae60;
+}
+
+.main-footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a1f2e 100%);
+  /* Um tom escuro passa seriedade */
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+  border-top: 4px solid #27ae60;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-column p,
+.footer-bottom p {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  color: #27ae60;
+  /* Verde da agricultura */
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  line-height: 2;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-column ul li a::before {
+  content: "▸ ";
+  margin-right: 8px;
+  color: #27ae60;
+  transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #27ae60;
+  padding-left: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #34495e;
+  font-size: 0.9em;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.footer-bottom a {
+  color: #27ae60;
+  text-decoration: none;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #34495e;
+  /* Fundo discreto */
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Cor oficial do Instagram no Hover */
+.social-icon.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  transform: translateY(-5px);
+}
+
+/* Botão Hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  text-align: right;
+  padding: 0 5%;
+  cursor: pointer;
+}
+
+/* GALERIA DE EVENTOS */
+.events-gallery {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.gallery-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-behavior: smooth;
+  background: linear-gradient(
+    135deg,
+    rgba(27, 94, 32, 0.05) 0%,
+    rgba(200, 230, 201, 0.05) 100%
+  );
+  border-radius: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #27ae60 rgba(27, 94, 32, 0.1);
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+  background: rgba(27, 94, 32, 0.1);
+  border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #27ae60 0%, #1b5e20 100%);
+  border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.event-card {
+  flex-shrink: 0;
+  width: 300px;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(27, 94, 32, 0.2);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: scaleUpIn 0.6s ease-out;
+}
+
+.event-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(27, 94, 32, 0.35);
+}
+
+.event-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    filter 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.15) rotate(2deg);
+  filter: brightness(1.2);
+}
+
+.event-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(27, 94, 32, 0.95) 60%,
+    rgba(27, 94, 32, 1) 100%
+  );
+  padding: 20px;
+  color: white;
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+}
+
+.event-card:hover .event-overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(27, 94, 32, 0.98) 30%,
+    rgba(27, 94, 32, 1) 100%
+  );
+}
+
+.event-overlay h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.event-card:hover .event-overlay h3 {
+  transform: translateX(5px);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.event-overlay p {
+  font-size: 0.95rem;
+  color: #e8f5e9;
+  margin: 0;
+  font-weight: 500;
+}
+
+.gallery-nav {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1b5e20 0%, #27ae60 100%);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn:hover {
+  transform: translateY(-4px) scale(1.1);
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  box-shadow: 0 8px 20px rgba(27, 94, 32, 0.6);
+}
+
+.nav-btn:active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  box-shadow: 0 8px 24px rgba(27, 94, 32, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .event-card {
+    width: 250px;
+    height: 200px;
+  }
+
+  .event-overlay h3 {
+    font-size: 1.1rem;
+  }
+
+  .event-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .gallery-scroll {
+    padding: 15px;
+  }
+
+  .gallery-nav {
+    bottom: 10px;
+    right: 15px;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #1b5e20;
+    padding: 20px 0;
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .brand-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-header h1 {
+    text-align: center;
+  }
+  .header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+    /* Garante que a imagem cubra todo o espaço sem distorcer */
+    opacity: 0.4;
+    /* Deixa a imagem mais transparente para destacar o texto */
+    z-index: 0;
+    /* Coloca a imagem atrás do conteúdo do cabeçalho */
+  }
+
+  .contact-info {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .info-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 20px;
+  }
+
+  .info-aside p {
+    font-size: 1.5rem;
+    color: #eef0ee;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 10px;
+    text-shadow: 1px 1px 2px rgba(243, 239, 239, 0.1);
+  }
+
+  .contact-info p {
+    font-size: 1.2rem;
+  }
+
+  .footer-text {
+    color: #f7f4f4;
+    font-size: 1.1rem;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .product-image-wrapper {
+    height: 180px;
+  }
+
+  .product-title {
+    font-size: 1.1rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
@@ -327,7 +1183,7 @@ span {
     right: 20px;
     /* Distância da direita */
     background-color: #25d366;
-    color: #FFF;
+    color: #fff;
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
@@ -338,263 +1194,308 @@ span {
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-}
+  }
 
-.whatsapp-float img {
+  .whatsapp-float img {
     width: 35px;
     height: 35px;
+  }
+
+  main {
+    padding: 30px 3%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .slogam-info p {
+    font-size: 1.2rem;
+  }
+
+  .info-aside {
+    gap: 15px;
+    margin-bottom: -10px;
+  }
+
+  .info-aside p {
+    font-size: 1.2rem;
+    margin-left: 15px;
+  }
+
+  .brand-container {
+    gap: 15px;
+    padding: 0 3%;
+  }
+
+  .main-header h1 {
+    font-size: 1.3rem;
+    max-width: 100%;
+  }
+
+  #produtos,
+  #Informaçoes,
+  #contato {
+    padding: 30px 20px;
+  }
+
+  .product-list li {
+    font-size: 0.95rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .about-section {
+    padding: 25px;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+  }
+
+  .product-content {
+    padding: 15px;
+  }
+
+  .product-card {
+    border-radius: 10px;
+  }
+
+  .category-badge {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  .footer-column {
+    min-width: 200px;
+  }
 }
 
-/* Efeito de aumentar ao passar o mouse */
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128c7e;
+/* Tablet - Breakpoint intermediário */
+@media (max-width: 1024px) {
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 25px;
+  }
+
+  .event-card {
+    width: 280px;
+    height: 230px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .main-nav ul {
+    gap: 20px;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  #produtos,
+  #Informaçoes,
+  #contato {
+    padding: 40px;
+  }
 }
 
-/* 1. Criando a animação de pulsação */
-@keyframes pulse-whatsapp {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
+/* Extra Small - Celulares pequenos */
+@media (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
 
-    70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
+  .main-header h1 {
+    font-size: 1.1rem;
+    letter-spacing: 0;
+  }
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
+  .slogam-info p {
+    font-size: 1rem;
+  }
 
-/* 2. Aplicando a animação ao botão */
-.whatsapp-float {
-    /* ... (mantenha as propriedades anteriores) ... */
-    animation: pulse-whatsapp 2s infinite;
-    /* Isso faz o pulso durar 2s e repetir para sempre */
-}
-
-
-
-.main-footer {
-    background-color: #2c3e50;
-    /* Um tom escuro passa seriedade */
-    color: white;
-    padding: 40px 20px 20px;
-    font-family: sans-serif;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
+  .info-aside {
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-}
+    gap: 10px;
+    margin-bottom: -5px;
+    margin-top: 10px;
+  }
 
-.footer-column {
-    flex: 1;
-    min-width: 250px;
-}
+  .info-aside p {
+    font-size: 1rem;
+    margin-left: 10px;
+    padding: 8px 12px;
+  }
 
-.footer-column p,
-.footer-bottom p {
-    margin-bottom: 15px;
-    color: #FFF;
-}
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
 
-.footer-column h3,
-.footer-column h4 {
-    color: #27ae60;
-    /* Verde da agricultura */
-    margin-bottom: 15px;
-}
+  h2::after {
+    bottom: -6px;
+    height: 3px;
+    animation: expandWidth 0.8s ease-out 0.3s forwards;
+    width: 50px;
+  }
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
+  .main-nav a {
+    font-size: 0.8rem;
+  }
 
-.footer-column ul li a {
-    color: #bdc3c7;
-    text-decoration: none;
-    line-height: 2;
-}
+  .main-nav ul {
+    gap: 15px;
+  }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #34495e;
-    font-size: 0.9em;
+  .brand-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 3%;
+  }
 
-}
+  .products-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+    max-width: 100%;
+  }
 
-.footer-bottom a {
-    color: #27ae60;
-    text-decoration: none;
-}
+  .product-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 
-.social-links {
-    margin-top: 15px;
-}
+  .product-image-wrapper {
+    height: 160px;
+  }
 
-social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #34495e;
-    /* Fundo discreto */
-    color: white;
-    font-size: 20px;
-    margin-right: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+  .product-title {
+    font-size: 1rem;
+  }
 
-/* Cor oficial do Instagram no Hover */
-.social-icon.instagram:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    transform: translateY(-5px);
-}
+  .product-description {
+    font-size: 0.85rem;
+  }
 
+  .event-card {
+    width: 200px;
+    height: 170px;
+    min-width: 200px;
+  }
 
+  .event-overlay h3 {
+    font-size: 0.95rem;
+  }
 
-/* Botão Hamburguer */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    text-align: right;
-    padding: 0 5%;
-    cursor: pointer;
-}
+  .event-overlay p {
+    font-size: 0.75rem;
+  }
 
-/* Responsividade */
-@media (max-width: 768px) {
+  .nav-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
 
-    .main-nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        background-color: #1b5e20;
-        padding: 20px 0;
-    }
+  .gallery-scroll {
+    gap: 12px;
+    padding: 12px;
+  }
 
-    .main-nav ul.active {
-        display: flex;
-    }
+  .gallery-nav {
+    bottom: 8px;
+    right: 10px;
+    gap: 6px;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  main {
+    padding: 25px 2%;
+  }
 
-    .brand-container {
-        flex-direction: column;
-        text-align: center;
-    }
+  #produtos,
+  #Informaçoes,
+  #contato {
+    padding: 20px 15px;
+  }
 
-    .main-header h1 {
-        text-align: center;
-    }
+  .product-list li {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
 
-    .contact-info {
-        text-align: center;
-        padding-left: 0;
+  .about-section {
+    padding: 20px 15px;
+  }
 
-    }
+  .about-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
 
-    .info-aside {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        gap: 20px;
+  .product-content {
+    padding: 12px;
+  }
 
+  .category-badge {
+    padding: 4px 10px;
+    font-size: 0.65rem;
+    top: 8px;
+    right: 8px;
+  }
 
+  .footer-column {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
 
-    }
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .info-aside p {
-        font-size: 1.5rem;
-        color: #eef0ee;
-        font-weight: 700;
-        text-align: left;
-        margin-left: 10px;
-        text-shadow: 1px 1px 2px rgba(243, 239, 239, 0.1);
-        
+  .footer-column h3,
+  .footer-column h4 {
+    margin-bottom: 10px;
+  }
 
-    }
+  .footer-column p {
+    margin-bottom: 10px;
+  }
 
-    .contact-info p {
-        font-size: 1.2rem;
-    }
+  .footer-bottom {
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 0.85em;
+  }
 
-    .footer-text {
-        color: #f7f4f4;
-        font-size: 1.1rem;
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 26px;
+  }
 
-    }
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
 
-    .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        /* Distância do fundo */
-        right: 20px;
-        /* Distância da direita */
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        /* Garante que fique acima de tudo */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease;
-    }
-
-    .whatsapp-float img {
-        width: 35px;
-        height: 35px;
-    }
-
-    /* Efeito de aumentar ao passar o mouse */
-    .whatsapp-float:hover {
-        transform: scale(1.1);
-        background-color: #128c7e;
-    }
-
-    /* 1. Criando a animação de pulsação */
-    @keyframes pulse-whatsapp {
-        0% {
-            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-        }
-
-        70% {
-            box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-        }
-
-        100% {
-            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-        }
-    }
-
-    /* 2. Aplicando a animação ao botão */
-    .whatsapp-float {
-        /* ... (mantenha as propriedades anteriores) ... */
-        animation: pulse-whatsapp 2s infinite;
-        /* Isso faz o pulso durar 2s e repetir para sempre */
-    }
-
-
-
-
+  .menu-toggle {
+    padding: 0 3%;
+  }
 }

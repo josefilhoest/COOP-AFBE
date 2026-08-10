@@ -39,12 +39,13 @@
 <body>
     <header class="main-header">
         <div>
-            <img class="header-background" src="./img/fundo agricola por.jpg" alt="Imagem de fundo do campo agrícola">
+            <video class="header-background" src="./img/Vídeo_cinematográfico_realista.mp4" alt="Imagem de fundo do campo agrícola" autoplay muted loop>
+            </video>
         </div>
 
         <div class="brand-container">
             <img class="logo" src="./img/logocoopafbe.png"
-                alt="Logo da COOP AFBE: Cooperativa de Agricultores Familiares de Beberibe" class="logo">
+                alt="Logo da COOP AFBE: Cooperativa de Agricultores Familiares de Beberibe">
             <h1>COOPERATIVA DOS PRODUTORES E AGRICULTORES FAMILIARES DE BEBERIBE LTDA</h1>
         </div>
 
@@ -170,20 +171,24 @@
                             químicos.</p>
                         <div class="product-footer">
 
-                            <div class="product-image-wrapper">
-                                <img src="./img/BATATA-DOCE-ROSADA_.jpeg"
-                                    alt="Batata doce rosada cultivada pela cooperativa">
-                            </div>
-                            <div class="product-content">
-                                <h3 class="product-title">Batata Doce</h3>
-                                <p class="product-description">Batatas doces e saborosas, cultivadas sem o uso de
-                                    pesticidas químicos.</p>
-                                <div class="product-footer">
-
-                                </div>
-                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="category-badge">Vegetais</span>
+                        <img src="./img/BATATA-DOCE-ROSADA_.jpeg"
+                            alt="Batata doce rosada cultivada pela cooperativa">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Batata Doce</h3>
+                        <p class="product-description">Batatas doces e saborosas, cultivadas sem o uso de
+                            pesticidas químicos.</p>
+                        <div class="product-footer">
 
+                        </div>
+                    </div>
+                </div>
 
             </section>
 
@@ -194,8 +199,78 @@
             <p>A COOP-AFBE, uma cooperativa de agricultores familiares, tem como missão oferecer produtos de qualidade
                 e promover a sustentabilidade. Nossos produtos são cultivados com práticas agrícolas responsáveis, garantindo
                 frescor e sabor. Valorizamos a comunidade local, apoiando os agricultores e contribuindo para a economia regional. Junte-se a nós para desfrutar de alimentos frescos e apoiar a agricultura familiar de Beberibe.</p>
-                <h2>Reunições</h2>
-                <p>Nossas reuniões acontecem mensalmente, sempre na última sexta-feira do mês, às 18h, na sede da cooperativa. Todos os membros são convidados a participar para discutir assuntos importantes, compartilhar ideias e fortalecer nossa comunidade agrícola. Sua presença é fundamental para o crescimento e sucesso da COOP-AFBE!</p>
+                
+            <h2>Reuniões</h2>
+            <p>Nossas reuniões acontecem mensalmente, sempre na última sexta-feira do mês, às 18h, na sede da cooperativa. Todos os membros são convidados a participar para discutir assuntos importantes, compartilhar ideias e fortalecer nossa comunidade agrícola. Sua presença é fundamental para o crescimento e sucesso da COOP-AFBE!</p>
+            
+            <h2 style="margin-top: 40px;">Eventos & Galeria</h2>
+            <div class="events-gallery">
+                <div class="gallery-scroll">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./img/cajuina.jpg" alt="Evento de colheita e comercialização">
+                            <div class="event-overlay">
+                                <h3>Colheita Comunitária</h3>
+                                <p>Julho 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./img/feijao.jpg" alt="Reunião de planejamento">
+                            <div class="event-overlay">
+                                <h3>Reunião de Planejamento</h3>
+                                <p>Junho 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./img/cheiro-verde.jpg" alt="Feira de produtos orgânicos">
+                            <div class="event-overlay">
+                                <h3>Feira de Produtos</h3>
+                                <p>Maio 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./img/manga.jpg" alt="Capacitação agrícola">
+                            <div class="event-overlay">
+                                <h3>Capacitação Agrícola</h3>
+                                <p>Abril 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./img/tomate.jpg" alt="Encontro com produtores">
+                            <div class="event-overlay">
+                                <h3>Encontro de Produtores</h3>
+                                <p>Março 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="./img/BATATA-DOCE-ROSADA_.jpeg" alt="Celebração de sucesso">
+                            <div class="event-overlay">
+                                <h3>Celebração de Conquistas</h3>
+                                <p>Fevereiro 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-nav">
+                    <button class="nav-btn prev-btn">❮</button>
+                    <button class="nav-btn next-btn">❯</button>
+                </div>
+            </div>
         </section>
         <section id="contato">
             <h2>Contato</h2>
@@ -254,6 +329,29 @@
         toggle.addEventListener("click", () => {
             menu.classList.toggle("active");
         });
+
+        // Galeria de eventos - navegação
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const galleryScroll = document.querySelector('.gallery-scroll');
+
+        if (prevBtn && nextBtn && galleryScroll) {
+            const scrollAmount = 340;
+
+            prevBtn.addEventListener('click', () => {
+                galleryScroll.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                galleryScroll.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
     </script>
     <a href="https://wa.me/558596657751" class="whatsapp-float" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
