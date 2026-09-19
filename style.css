@@ -66,12 +66,7 @@ p {
   margin-bottom: 20px;
 }
 
-span {
-  color: #0e853f;
-  /* Verde vibrante para destacar palavras-chave */
-  font-weight: 700;
-  font-size: 1.7rem;
-}
+
 
 /*.main-header {
   background: linear-gradient(120deg, #2e7d32 0%, #e6fb2d 100%);
@@ -96,6 +91,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   object-fit: cover;
   /* Garante que a imagem cubra todo o espaço sem distorcer */
   opacity: 0.4;
@@ -135,8 +131,9 @@ span {
 
 .info-aside {
   display: flex;
-  flex-direction: wrap;
-  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 30px;
   margin-bottom: -25px;
   margin-top: 20px;
@@ -214,11 +211,9 @@ span {
 .product-list li {
   margin-bottom: 12px;
   padding: 12px 16px;
-  background: linear-gradient(
-    90deg,
-    rgba(27, 94, 32, 0.05) 0%,
-    rgba(39, 174, 96, 0.05) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(27, 94, 32, 0.05) 0%,
+      rgba(39, 174, 96, 0.05) 100%);
   border-left: 4px solid #27ae60;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -227,11 +222,9 @@ span {
 }
 
 .product-list li:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(27, 94, 32, 0.1) 0%,
-    rgba(39, 174, 96, 0.1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(27, 94, 32, 0.1) 0%,
+      rgba(39, 174, 96, 0.1) 100%);
   padding-left: 20px;
   box-shadow: 0 2px 8px rgba(27, 94, 32, 0.15);
 }
@@ -294,12 +287,10 @@ span {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
   transition: left 0.5s ease;
   z-index: 1;
 }
@@ -364,11 +355,9 @@ span {
 }
 
 #produtos {
-  background: linear-gradient(
-    135deg,
-    rgba(232, 245, 233, 0.5) 0%,
-    rgba(200, 230, 201, 0.3) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(232, 245, 233, 0.5) 0%,
+      rgba(200, 230, 201, 0.3) 100%);
   padding: 50px 30px;
   border-radius: 12px;
   margin-bottom: 50px;
@@ -554,14 +543,12 @@ span {
 .social-link i.fa-instagram {
   font-size: 2.5rem;
   /* Tamanho maior para o ícone brilhar sozinho */
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
+  background: radial-gradient(circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -648,6 +635,7 @@ span {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -659,6 +647,7 @@ span {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -670,6 +659,7 @@ span {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -680,26 +670,31 @@ span {
   from {
     width: 0;
   }
+
   to {
     width: 60px;
   }
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes glow {
+
   0%,
   100% {
     box-shadow: 0 0 5px rgba(27, 94, 32, 0.5);
   }
+
   50% {
     box-shadow: 0 0 15px rgba(27, 94, 32, 0.8);
   }
@@ -710,13 +705,11 @@ span {
   animation-delay: 0.2s;
 }
 
-#Informaçoes {
+#Informacoes {
   animation-delay: 0.4s;
-  background: linear-gradient(
-    135deg,
-    rgba(232, 245, 233, 0.3) 0%,
-    rgba(200, 230, 201, 0.2) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(232, 245, 233, 0.3) 0%,
+      rgba(200, 230, 201, 0.2) 100%);
   padding: 40px;
   border-radius: 12px;
   border-left: 5px solid #27ae60;
@@ -725,11 +718,9 @@ span {
 
 #contato {
   animation-delay: 0.6s;
-  background: linear-gradient(
-    135deg,
-    rgba(200, 230, 201, 0.3) 0%,
-    rgba(232, 245, 233, 0.3) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(200, 230, 201, 0.3) 0%,
+      rgba(232, 245, 233, 0.3) 100%);
   padding: 40px;
   border-radius: 12px;
   border-left: 5px solid #27ae60;
@@ -830,6 +821,7 @@ span {
   padding-left: 10px;
 }
 
+
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -844,11 +836,17 @@ span {
   text-decoration: none;
 }
 
+#ano-atual {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 .social-links {
   margin-top: 15px;
 }
 
-social-icon {
+.social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -866,19 +864,21 @@ social-icon {
 
 /* Cor oficial do Instagram no Hover */
 .social-icon.instagram:hover {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
+  background: radial-gradient(circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%);
   transform: translateY(-5px);
 }
 
 /* Botão Hamburguer */
 .menu-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: inherit;
   display: none;
   font-size: 2rem;
   color: white;
@@ -901,11 +901,9 @@ social-icon {
   overflow-x: auto;
   padding: 20px;
   scroll-behavior: smooth;
-  background: linear-gradient(
-    135deg,
-    rgba(27, 94, 32, 0.05) 0%,
-    rgba(200, 230, 201, 0.05) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(27, 94, 32, 0.05) 0%,
+      rgba(200, 230, 201, 0.05) 100%);
   border-radius: 12px;
   scrollbar-width: thin;
   scrollbar-color: #27ae60 rgba(27, 94, 32, 0.1);
@@ -972,12 +970,10 @@ social-icon {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(27, 94, 32, 0.95) 60%,
-    rgba(27, 94, 32, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(27, 94, 32, 0.95) 60%,
+      rgba(27, 94, 32, 1) 100%);
   padding: 20px;
   color: white;
   transform: translateY(0);
@@ -986,12 +982,10 @@ social-icon {
 }
 
 .event-card:hover .event-overlay {
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(27, 94, 32, 0.98) 30%,
-    rgba(27, 94, 32, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(27, 94, 32, 0.98) 30%,
+      rgba(27, 94, 32, 1) 100%);
 }
 
 .event-overlay h3 {
@@ -1057,7 +1051,43 @@ social-icon {
   box-shadow: 0 8px 24px rgba(27, 94, 32, 0.5);
 }
 
+.events-title {
+  margin-top: 40px;
+}
+
 /* Responsividade */
+/* Tablet - Breakpoint intermediário */
+@media (max-width: 1024px) {
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 25px;
+  }
+
+  .event-card {
+    width: 280px;
+    height: 230px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .main-nav ul {
+    gap: 20px;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  #produtos,
+  #Informacoes,
+  #contato {
+    padding: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .event-card {
     width: 250px;
@@ -1112,12 +1142,12 @@ social-icon {
   .main-header h1 {
     text-align: center;
   }
+
   .header-background {
     position: absolute;
     top: 0;
     left: 0;
     max-width: 100%;
-    max-height: 30vh;
     object-fit: cover;
     /* Garante que a imagem cubra todo o espaço sem distorcer */
     opacity: 0.4;
@@ -1134,16 +1164,17 @@ social-icon {
   .info-aside {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: -10px;
   }
 
   .info-aside p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #eef0ee;
     font-weight: 700;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 15px;
     text-shadow: 1px 1px 2px rgba(243, 239, 239, 0.1);
   }
 
@@ -1217,16 +1248,6 @@ social-icon {
     font-size: 1.2rem;
   }
 
-  .info-aside {
-    gap: 15px;
-    margin-bottom: -10px;
-  }
-
-  .info-aside p {
-    font-size: 1.2rem;
-    margin-left: 15px;
-  }
-
   .brand-container {
     gap: 15px;
     padding: 0 3%;
@@ -1238,7 +1259,7 @@ social-icon {
   }
 
   #produtos,
-  #Informaçoes,
+  #Informacoes,
   #contato {
     padding: 30px 20px;
   }
@@ -1281,37 +1302,7 @@ social-icon {
   }
 }
 
-/* Tablet - Breakpoint intermediário */
-@media (max-width: 1024px) {
-  .products-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    padding: 25px;
-  }
 
-  .event-card {
-    width: 280px;
-    height: 230px;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  .main-nav ul {
-    gap: 20px;
-  }
-
-  .main-nav a {
-    font-size: 0.9rem;
-  }
-
-  #produtos,
-  #Informaçoes,
-  #contato {
-    padding: 40px;
-  }
-}
 
 /* Extra Small - Celulares pequenos */
 @media (max-width: 480px) {
@@ -1427,7 +1418,7 @@ social-icon {
   }
 
   #produtos,
-  #Informaçoes,
+  #Informacoes,
   #contato {
     padding: 20px 15px;
   }
